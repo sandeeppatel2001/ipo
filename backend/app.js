@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   arr.clear();
   arr = [];
   console.log("sandeep", arr);
-  res.sendFile(__dirname, "../index.html");
+  res.sendFile(__dirname, "../loading.htm;");
 });
 app.post("/delete", (req, res) => {
   console.log("sandeep", arr);
