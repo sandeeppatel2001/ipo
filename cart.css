@@ -57,6 +57,7 @@ hr {
 }
 .productcont {
   display: flex;
+  overflow-y: scroll;
 }
 .product {
   width: 250px;

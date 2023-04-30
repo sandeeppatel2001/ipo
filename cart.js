@@ -137,3 +137,20 @@ send();
 document.getElementById("checkout").addEventListener("click", (e) => {
   window.location.href = "./qr.html";
 });
+document.getElementById("emptycart").addEventListener("click", (e) => {
+  const req = new XMLHttpRequest();
+  const urlParams = {
+    r: "cart",
+  };
+
+  const baseUrl = "https://pickfress.adaptable.app/delete";
+  req.open("POST", baseUrl, true);
+  req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  req.send(JSON.stringify(urlParams));
+  req.onreadystatechange = async function () {
+    // Call a function when the state changes.
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      const nodedata = JSON.parse(this.responseText);
+    }
+  };
+});
