@@ -89,7 +89,7 @@ async function send(r) {
     r: r,
   };
 
-  const baseUrl = "http://localhost:8000/a";
+  const baseUrl = "https://pickfress.adaptable.app/a";
   req.open("POST", baseUrl, true);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   req.send(JSON.stringify(urlParams));

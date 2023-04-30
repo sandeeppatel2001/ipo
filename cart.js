@@ -100,7 +100,7 @@ function send() {
     r: "cart",
   };
 
-  const baseUrl = "http://localhost:8000/cart";
+  const baseUrl = "https://pickfress.adaptable.app/cart";
   req.open("POST", baseUrl, true);
   req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   req.send(JSON.stringify(urlParams));
