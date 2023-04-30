@@ -17,9 +17,19 @@ app.use(express.static(path.join(__dirname, "../")));
 const arr = new Set();
 const nodemailer = require("nodemailer");
 app.get("/", (req, res) => {
-  arr.clear();
-  res.sendFile(__dirname, "../index.html");
+  console.log("sandeep", arr);
   console.log(y);
+  arr.clear();
+  arr = [];
+  console.log("sandeep", arr);
+  res.sendFile(__dirname, "../index.html");
+});
+app.post("/delete", (req, res) => {
+  console.log("sandeep", arr);
+  arr.clear();
+
+  console.log("sandeep", arr);
+  console.log("emptycart");
 });
 app.post("/a", (req, res) => {
   console.log(req.body.r);
@@ -28,7 +38,7 @@ app.post("/a", (req, res) => {
 });
 app.post("/cart", (req, res) => {
   let y = [...arr];
-  console.log(req.body.r);
+
   res.send(y);
 });
 app.listen(port, () => {
