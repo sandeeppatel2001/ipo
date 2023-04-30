@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, "../")));
 const arr = new Set();
 const nodemailer = require("nodemailer");
 app.get("/", (req, res) => {
+  arr.clear();
   res.sendFile(__dirname, "../index.html");
   console.log(y);
 });
